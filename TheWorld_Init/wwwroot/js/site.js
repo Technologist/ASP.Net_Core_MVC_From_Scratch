@@ -4,31 +4,36 @@
 
     var e = $("#username");
     e.text("New jQuery");
+    
+    var main = $("#TopSide");
 
-    var main1 = $("#main");
-
-    main1.on("mouseenter",
+    main.on("mouseenter",
         function () {
-            main1.style.backgroundColor = "#222";
+            main.style = "background-color: #888;";
         });
 
-    main1.on("mouseleave",
+    main.on("mouseleave",
         function () {
-            main1.style.backgroundColor = "";
+            main.style = "";
         });
 
+    var menuItems = $("ul.menu li a");
+    menuItems.on("click",
+        function() {
+            var me = $(this);
+            alert(me.text());
+        });
 
-    var $sidebarAndWrapper = $("#sidebar,#wrapper");
-    $("#sidebarToggleButtonButton").on("click",
+    var sidebarAndWrapper = $("#sidebar,#wrapper");
+    $("#sidebarToggleButton").on("click",
         function () {
-            $sidebarAndWrapper.toggleClass("hide-sidebar");
-            if ($sidebarAndWrapper.hasClass("hide-sidebar")) {
+            sidebarAndWrapper.toggleClass("hide-sidebar");
+            if (sidebarAndWrapper.hasClass("hide-sidebar")) {
                 $(this).text("Show Sidebar");
+                console.log("Show Sidebar");
             } else {
                 $(this).text("Hide Sidebar");
-
+                console.log("Hide Sidebar");
             }
         });
-
-
 })();
