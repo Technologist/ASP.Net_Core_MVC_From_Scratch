@@ -21,25 +21,8 @@ namespace TheWorld_Init
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            //loggerFactory.AddConsole();
-
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync(@"
-                        <html>
-                            <head>
-                                <title>Test</title>
-                            </head>
-                            <body>
-                                <h3>Hello World!</h3>
-                            </body>
-                        </html>");
-            });
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
         }
     }
 }
