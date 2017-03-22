@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\css\site.css" />
+    <Content Include="wwwroot\img\2.jpg" />
+    <Content Include="wwwroot\img\Ashraf.jpg" />
+    <Content Include="wwwroot\js\site.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\Index.html" />
   </ItemGroup>
   <ItemGroup>
