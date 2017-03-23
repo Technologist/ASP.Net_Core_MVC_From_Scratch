@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TheWorld_Init.ViewModules;
 
 namespace TheWorld_Init.Controllers.Web
 {
@@ -20,6 +21,11 @@ namespace TheWorld_Init.Controllers.Web
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Contact(ContactViewModule model)
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();

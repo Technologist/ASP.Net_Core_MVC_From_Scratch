@@ -22,14 +22,15 @@
             <div>
                 <button id="sidebarToggleButton">Hide Sidebar</button>
             </div>
-             @RenderBody()
+            @RenderBody()
         </div>
-         
+
         <div id="footer">
             &copy;2017 The world Ltd.
         </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @RenderSection("scripts",false)
     <script src="~/js/site.js"></script>
 </body>
 
