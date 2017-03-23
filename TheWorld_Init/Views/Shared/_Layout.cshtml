@@ -11,9 +11,10 @@
         <img src="~/img/Ashraf.jpg" alt="Ashraf's funny pic" class="headshot" />
         <span id="username">Ashraf Mehdaly</span>
         <ul class="menu">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            @*Install-Package Microsoft.AspNetCore.Mvc.TagHelpers*@
+            <li class="active"><a asp-controller="App" asp-action="Index">Home</a></li>
+            <li><a a asp-controller="App" asp-action="About">About</a></li>
+            <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
         </ul>
     </div>
     <div id="wrapper">
