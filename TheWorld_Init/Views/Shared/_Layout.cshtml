@@ -3,6 +3,9 @@
 <head>
     <title>The World - @ViewBag.Title</title>
     <meta charset="utf-8" />
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <link href="~/css/site.css" rel="stylesheet" />
 
 </head>
@@ -20,18 +23,22 @@
     <div id="wrapper">
         <div id="TopSide">
             <div>
-                <button id="sidebarToggleButton">Hide Sidebar</button>
+                <button id="sidebarToggleButton" class="btn btn-primary btn-sm">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                </button>
             </div>
             @RenderBody()
         </div>
 
-        <div id="footer">
-            &copy;2017 The world Ltd.
+        <div class="text-primary" id="footer">
+            &copy; 2017 The world Ltd.
         </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @RenderSection("scripts",false)
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/js/site.js"></script>
+
+    @RenderSection("scripts", false)
 </body>
 
 </html>
