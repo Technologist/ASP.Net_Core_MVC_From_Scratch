@@ -11,7 +11,6 @@
 <h2>Contact Me</h2>
 
 <form method="post">
-    <span asp-validation-summary="ModelOnly"></span>
     <label asp-for="Name"></label>
     <input asp-for="Name"/>
     <span asp-validation-for="Name"></span>
@@ -21,6 +20,11 @@
     <label asp-for="Message"></label>
     <textarea cols="40" rows="4" asp-for="Message"></textarea>
     <span asp-validation-for="Message"></span>
+    <div style="color: red" asp-validation-summary="ModelOnly"></div>
+    @if (ViewBag.UserMessage != null)
+    {
+        <div  style="color: #0ea96e">@ViewBag.UserMessage</div>
+    }
     <div>
         <input type="submit" value="Send Message"/>
     </div>
