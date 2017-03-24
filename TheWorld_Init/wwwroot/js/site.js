@@ -4,7 +4,7 @@
 
     var e = $("#username");
     e.text("New jQuery");
-    
+
     var main = $("#TopSide");
 
     main.on("mouseenter",
@@ -17,17 +17,18 @@
             main.style = "";
         });
 
-    
+
     var sidebarAndWrapper = $("#sidebar,#wrapper");
+    var $icon = $("#sidebarToggleButton i.fa");
     $("#sidebarToggleButton").on("click",
         function () {
             sidebarAndWrapper.toggleClass("hide-sidebar");
             if (sidebarAndWrapper.hasClass("hide-sidebar")) {
-                $(this).text("Show Sidebar");
-                console.log("Show Sidebar");
+                $icon.removeClass("fa-angle-left");
+                $icon.addClass("fa-angle-right");
             } else {
-                $(this).text("Hide Sidebar");
-                console.log("Hide Sidebar");
+                $icon.removeClass("fa-angle-right");
+                $icon.addClass("fa-angle-left");
             }
         });
 })();
