@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using TheWorld_Init.Models;
 using TheWorld_Init.Services;
 
 namespace TheWorld_Init
@@ -34,6 +35,7 @@ namespace TheWorld_Init
             {
                 //Emplement real service
             }
+            services.AddDbContext<WorldContext>();
             services.AddMvc();
         }
 
