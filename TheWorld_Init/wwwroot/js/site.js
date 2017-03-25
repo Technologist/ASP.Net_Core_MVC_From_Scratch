@@ -5,7 +5,7 @@
     var e = $("#username");
     e.text("New jQuery");
 
-    var main = $("#TopSide");
+    var main = $("#main");
 
     main.on("mouseenter",
         function () {
