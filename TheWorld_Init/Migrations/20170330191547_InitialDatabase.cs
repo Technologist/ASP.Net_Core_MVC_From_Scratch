@@ -25,6 +25,21 @@ namespace TheWorld_Init.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    BirthDate = table.Column<DateTime>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Stops",
                 columns: table => new
                 {
@@ -58,6 +73,9 @@ namespace TheWorld_Init.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Stops");
+
+            migrationBuilder.DropTable(
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Trips");

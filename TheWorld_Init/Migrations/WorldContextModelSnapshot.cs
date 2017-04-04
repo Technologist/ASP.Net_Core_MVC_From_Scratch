@@ -56,6 +56,22 @@ namespace TheWorld_Init.Migrations
                     b.ToTable("Trips");
                 });
 
+            modelBuilder.Entity("TheWorld_Init.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("BirthDate");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("TheWorld_Init.Models.Stop", b =>
                 {
                     b.HasOne("TheWorld_Init.Models.Trip")
