@@ -2,9 +2,7 @@
 (function () {
 
 
-    var e = $("#username");
-    e.text("New jQuery");
-
+    
     var main = $("#main");
 
     main.on("mouseenter",

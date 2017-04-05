@@ -56,7 +56,7 @@ namespace TheWorld_Init
                     );
             });
 
-            seeder.EnsureSeedData().Wait();
+            //seeder.EnsureSeedData().Wait();
 
         }
     }

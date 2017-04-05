@@ -26,9 +26,10 @@ namespace TheWorld_Init.Controllers.Web
         }
         public IActionResult Index()
         {
-            var data = _context.Trips.ToList();
+            //var data = _context.Trips.ToList();
 
-            return View(data);
+            //return View(data);
+            return View();
         }
 
         public IActionResult Contact()
